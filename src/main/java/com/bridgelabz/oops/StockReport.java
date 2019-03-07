@@ -14,6 +14,7 @@ import com.bridgelabz.util.Utility;
 
 public class StockReport {
 
+	@SuppressWarnings({ "rawtypes", "unchecked" })
 	public static void main(String[] args) throws JsonParseException, JsonMappingException, IOException {
 		Company company = new Company();
 		String companyPath = "/home/admin1/eclipse-workspace/tasif/oops/oops/src/main/java/JsonFiles/Company.json";
@@ -36,7 +37,7 @@ public class StockReport {
 				company.setStockPrice(Utility.inputInteger());
 				companyLists.add(company);
 				System.out.println("Stock Details added successfully");
-				String companyJson = objectMapper.writeValueAsString(company);
+				//String companyJson = objectMapper.writeValueAsString(company);
 				//Utility.writeToJsonFileWithOutOverWriting(companyJson, companyPath);
 				Utility.writeObjectJson(companyLists, companyPath);
 				System.out.println(company);

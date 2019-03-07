@@ -10,6 +10,7 @@ import org.codehaus.jackson.map.ObjectMapper;
 
 public class InventoryDataManagement {
 
+	@SuppressWarnings({ "unchecked", "rawtypes" })
 	public static void main(String[] args) throws IOException {
 		Rice rice = new Rice();
 		Wheats wheat = new Wheats();
@@ -66,10 +67,8 @@ public class InventoryDataManagement {
 					inventoryRice.setPrice(Utility.inputDouble());
 					riceLists.add(inventoryRice);
 					System.out.println("Rice inventory added successfully");
-					String riceJson = objectMapper.writeValueAsString(inventoryRice);
-					//Utility.writeToJsonFile(riceJson, writeRicePath);
+					//String riceJson = objectMapper.writeValueAsString(inventoryRice);
 					Utility.writeObjectJson(riceLists, writeRicePath);
-					System.out.println(riceJson);
 					System.out.println("File Writted Successfully");
 					break;
 				case 2 :
@@ -82,7 +81,7 @@ public class InventoryDataManagement {
 					inventoryWheat.setPrice(Utility.inputDouble());
 					wheatsLists.add(inventoryWheat);
 					System.out.println("Wheat inventory added successfully");
-					String wheatsJson = objectMapper.writeValueAsString(inventoryWheat);
+					//String wheatsJson = objectMapper.writeValueAsString(inventoryWheat);
 					//Utility.writeToJsonFile(wheatsJson, writeWheatPath);
 					Utility.writeObjectJson(wheatsLists, writeWheatPath);
 					System.out.println("File Writted Successfully");
@@ -97,7 +96,7 @@ public class InventoryDataManagement {
 					inventoryPulses.setPrice(Utility.inputDouble());
 					pulseList.add(inventoryPulses);
 					System.out.println("Pulse inventory added successfully");
-					String pulsesJson = objectMapper.writeValueAsString(inventoryPulses);
+					//String pulsesJson = objectMapper.writeValueAsString(inventoryPulses);
 					//Utility.writeToJsonFile(pulsesJson, writePulsePath);
 					Utility.writeObjectJson(pulseList, writePulsePath);
 					System.out.println("File Writted Successfully");

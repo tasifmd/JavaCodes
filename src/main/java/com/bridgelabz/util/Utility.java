@@ -12,8 +12,6 @@ import org.codehaus.jackson.JsonGenerationException;
 import org.codehaus.jackson.map.JsonMappingException;
 import org.codehaus.jackson.map.ObjectMapper;
 
-import com.sun.tools.javac.util.List;
-
 public class Utility {
 	
 	static Scanner sc = new Scanner(System.in);
@@ -95,13 +93,22 @@ public class Utility {
 		sc.close();
 	}
 	
+
+	public static void writeFile(String path,String string) throws IOException{
+		FileWriter filewriter = new FileWriter(path);
+		BufferedWriter bw = new BufferedWriter(filewriter);
+		
+		filewriter.write(string);
+		
+		bw.close();
+		filewriter.close();
+	}	
 	/**
 	 * Purpose : Function to read data from a file 
 	 * @param filename : Passing file location as an argument
 	 * @return : data of file as a string 
 	 * @throws IOException
 	 */
-	
 	public static String readFile(String filename) throws IOException{
 		
 		//Creating FileReader Object
@@ -162,7 +169,7 @@ public class Utility {
 		bufferedWriter.close();
 	}
 	
-	public static void writeObjectJson(java.util.List lists , String path) throws JsonGenerationException, JsonMappingException, IOException {
+	public static void writeObjectJson(@SuppressWarnings("rawtypes") java.util.List lists , String path) throws JsonGenerationException, JsonMappingException, IOException {
 		Object[] arr = lists.toArray();
 		ObjectMapper om = new ObjectMapper();
 		om.writeValue(new File(path), arr);
