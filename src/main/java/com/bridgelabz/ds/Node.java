@@ -2,8 +2,8 @@ package com.bridgelabz.ds;
 
 public class Node<T> implements Comparable<T> {
     
-   private T value;
-   private Node<T> nextRef;
+   T value;
+   Node<T> nextRef;
     
    public T getValue() {
        return value;

@@ -12,6 +12,8 @@ import org.codehaus.jackson.JsonGenerationException;
 import org.codehaus.jackson.map.JsonMappingException;
 import org.codehaus.jackson.map.ObjectMapper;
 
+import com.bridgelabz.ds.LinkedList;
+
 public class Utility {
 	
 	static Scanner sc = new Scanner(System.in);
@@ -171,6 +173,13 @@ public class Utility {
 	
 	public static void writeObjectJson(@SuppressWarnings("rawtypes") java.util.List lists , String path) throws JsonGenerationException, JsonMappingException, IOException {
 		Object[] arr = lists.toArray();
+		ObjectMapper om = new ObjectMapper();
+		om.writeValue(new File(path), arr);
+	}
+	
+	@SuppressWarnings({ "unchecked", "rawtypes" })
+	public static <T> void writeObjectJsonLinkesList(LinkedList<T> list , String path) throws JsonGenerationException, JsonMappingException, IOException {
+		Object arr[] = list.convArray(list, list.size());
 		ObjectMapper om = new ObjectMapper();
 		om.writeValue(new File(path), arr);
 	}
