@@ -3,9 +3,9 @@ package com.bridgelabz.ds;
 import java.io.Serializable;
 
 public class LinkedList<T> {
-	private Node<T> head;
-    private Node<T> tail;
-
+	Node<T> head;
+    Node<T> tail;
+    
 	public boolean isEmpty(){
 		return head==null;
 	}
@@ -21,8 +21,46 @@ public class LinkedList<T> {
             tail.setNextRef(nd);
             tail = nd;
         }
+      
     }
-    
+    public void insertAtLast(T data)
+	{
+		Node<T> node = new Node<T>();
+		node.value = data;
+		if(head == null)
+		{
+			head = node;
+			node.value = null;
+		}
+		else
+		{
+			Node<T> n = head;
+			while(n.nextRef!=null)
+			{
+				n = n.nextRef;
+			}
+			node.nextRef = null;
+			n.nextRef = node;
+		}
+	}
+    public T deleteAtLast()
+	{
+		if(head == null)
+			return null;
+		else
+		{
+			Node<T> n = head;
+			Node<T> prev = head;
+			while(n.nextRef!=null)
+			{
+				prev = n;
+				n = n.nextRef;
+			}	
+			T data = n.value;
+			prev.nextRef = null;
+			return(data);
+		}
+	}
     public void remove(int index){
 		if(isEmpty())
 			return;

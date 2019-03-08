@@ -177,7 +177,6 @@ public class Utility {
 		om.writeValue(new File(path), arr);
 	}
 	
-	@SuppressWarnings({ "unchecked", "rawtypes" })
 	public static <T> void writeObjectJsonLinkesList(LinkedList<T> list , String path) throws JsonGenerationException, JsonMappingException, IOException {
 		Object arr[] = list.convArray(list, list.size());
 		ObjectMapper om = new ObjectMapper();
