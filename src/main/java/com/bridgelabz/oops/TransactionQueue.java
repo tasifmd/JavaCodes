@@ -16,7 +16,7 @@ public class TransactionQueue {
 	public static void main(String[] args) throws JsonParseException, JsonMappingException, IOException {
 		Company company = new Company();
 		Customer customer = new Customer();
-		String companyPath = "/home/admin1/eclipse-workspace/tasif/oops/oops/src/main/java/JsonFiles/Company.json";
+		String companyPath = "/home/admin1/eclipse-workspace/tasif/oops/oops/src/main/java/JsonFiles/CompJson.json";
 		File companyFile = new File(companyPath) ;
 		String customerJsonPath = "/home/admin1/eclipse-workspace/tasif/oops/oops/src/main/java/JsonFiles/CustJson.json";
 		File customerFile = new File(customerJsonPath);
