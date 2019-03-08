@@ -8,10 +8,10 @@ import org.codehaus.jackson.JsonParseException;
 import org.codehaus.jackson.map.JsonMappingException;
 import org.codehaus.jackson.map.ObjectMapper;
 
-import com.bridgelabz.ds.Stack;
+import com.bridgelabz.ds.Queue;
 import com.bridgelabz.util.Utility;
 
-public class StockStack {
+public class TransactionQueue {
 
 	public static void main(String[] args) throws JsonParseException, JsonMappingException, IOException {
 		Company company = new Company();
@@ -23,12 +23,11 @@ public class StockStack {
 		ObjectMapper objectMapper = new ObjectMapper();
 		List<Company> listCompany  = objectMapper.readValue(companyFile, new org.codehaus.jackson.type.TypeReference<List<Company>>() {});
 		List<Customer> listCustomer  = objectMapper.readValue(customerFile, new org.codehaus.jackson.type.TypeReference<List<Customer>>() {});
-		System.out.println("Buyed and selled Stocks \n ----------------------------------------------------");
+		System.out.println("Transaction queue\n--------------------------------------------------------");
 		System.out.println(listCompany);
 		System.out.println(listCustomer);
-		Stack<Integer> buyed = new Stack<Integer>();
-		Stack<Integer> sold = new Stack<Integer>();
-		buyed.push(0);sold.push(0);
+		Queue<String> buydate = new Queue<String>();
+		Queue<String> selldate = new Queue<String>();
 		boolean flag = false ;
 		while (flag == false) {
 			company = (Company) listCompany.get(0);
@@ -36,7 +35,7 @@ public class StockStack {
 			System.out.println(company);
 			System.out.println(customer);
 			System.out.print("Enter your choice what you want to do ");
-			System.out.println("\t 1.Buy Shares \t 2.Sell Shares \t 3.Display buyed and Sold Shares \t 4.Exit");
+			System.out.println("\t 1.Buy Shares \t 2.Sell Shares \t 3.Display Date of buyed and Sold Shares \t 4.Exit");
 			int customerChoice = Utility.inputInteger();
 			switch(customerChoice) {
 			case 1:
@@ -58,13 +57,11 @@ public class StockStack {
 					String date = Utility.inputSingleString();
 					customer.setDate(date);
 					System.out.println("You have successfully buyed "+buyNumShares+" of "+company.getName()+" on "+customer.getDate());
-					buyed.push(buyNumShares);
+					buydate.enqueue(date);
 					listCompany.add(company);
 					listCustomer.add(customer);
 					Utility.writeObjectJson(listCompany, companyPath);
 					Utility.writeObjectJson(listCustomer, customerJsonPath);
-					//objectMapper.writeValue(companyFile, company);
-					//objectMapper.writeValue(customerFile, customer);
 				}
 				break;
 			case 2 :
@@ -86,21 +83,19 @@ public class StockStack {
 					String date = Utility.inputSingleString();
 					customer.setDate(date);
 					System.out.println("You have successfully selled "+selNumShares+" to "+company.getName()+" on "+customer.getDate());
-					sold.push(selNumShares);
+					selldate.enqueue(date);
 					listCompany.add(company);
 					listCustomer.add(customer);
 					Utility.writeObjectJson(listCompany, companyPath);
 					Utility.writeObjectJson(listCustomer, customerJsonPath);
-					//objectMapper.writeValue(companyFile, company);
-					//objectMapper.writeValue(customerFile, customer);
 				}
 				break;
 				
 			case 3 :
-				System.out.println("Number of buyed stock is ");
-				buyed.print();
-				System.out.println("Number of selled Stock is ");
-				sold.print();
+				System.out.println("Date of buyed stock is ");
+				buydate.print();
+				System.out.println("Date of selled Stock is ");
+				selldate.print();
 				break;
 			case 4 :
 				System.exit(0);

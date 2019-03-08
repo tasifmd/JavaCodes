@@ -1,4 +1,4 @@
-package com.bridgelabz.oops;
+package com.bridgelabz.ds;
 
 import com.bridgelabz.ds.LinkedList;
 
