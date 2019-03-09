@@ -27,4 +27,8 @@ public class Queue<T> {
 	public void print() {
 		linkedlist.print();
 	}
+	
+	public T getQueue() {
+		return linkedlist.getElement(0);
+	}
 }
