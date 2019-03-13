@@ -12,6 +12,11 @@ import org.codehaus.jackson.map.ObjectMapper;
 
 import com.bridgelabz.util.Utility;
 
+/**
+ * Purpose : Write a program to read in Stock Names, Number of Share, Share Price. Print a Stock Report with total value of each Stock and the total value of Stock.
+ * @author : Tasif Mohammed
+ * @version : 1.0
+ */
 public class StockReport {
 
 	@SuppressWarnings({ "rawtypes", "unchecked" })

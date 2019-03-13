@@ -1,5 +1,10 @@
 package com.bridgelabz.oops;
 
+/**
+ * Purpose : Class that contains private data members and required getters and setters
+ * @author : Tasif Mohammed
+ * @version : 1.0
+ */
 public class Customer {
 	private String name;
 	private long mobileNumber;

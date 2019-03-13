@@ -8,6 +8,11 @@ import java.util.List;
 
 import org.codehaus.jackson.map.ObjectMapper;
 
+/**
+ * Purpose : Get JSON Object in Java or NSDictionary in iOS. Create Inventory Object from JSON. Calculate the value for every Inventory.
+ * @author : Tasif Mohammed
+ * @version : 1.0
+ */
 public class InventoryDataManagement {
 
 	@SuppressWarnings({ "unchecked", "rawtypes" })

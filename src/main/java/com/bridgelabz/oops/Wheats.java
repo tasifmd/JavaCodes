@@ -1,5 +1,10 @@
 package com.bridgelabz.oops;
 
+/**
+ * Class that contains data members and required getters and setters 
+ * @author :Tasif Mohammed
+ * @version :1.0
+ */
 public class Wheats {
 	private String name;
 	private double weight;

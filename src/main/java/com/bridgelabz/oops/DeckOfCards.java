@@ -2,6 +2,11 @@ package com.bridgelabz.oops;
 
 import java.util.Random;
 
+/**
+ * Purpose : initialize deck of cards having suit ("Clubs", "Diamonds", "Hearts", "Spades") & Rank ("2", "3", "4", "5", "6", "7", "8", "9", "10", "Jack", "Queen", "King", "Ace"). Shuffle the cards using Random method and then distribute 9 Cards to 4 Players and Print the Cards the received by the 4 Players using 2D Array
+ * @author : Tasif Mohammed
+ * @version : 1.0
+ */
 public class DeckOfCards {
 	
 	int[][] array = new int[4][13];
@@ -17,12 +22,20 @@ public class DeckOfCards {
 
 	}
 	
+	/**
+	 * Allot cards for each players
+	 * @param playerNumber
+	 */
 	void allotCards(int playerNumber) {
 		for (int i = 0; i < 9; i++) {
 			allotOneCard(playerNumber);
 		}
 	}
 
+	/**
+	 * Allot one card randomly for each player
+	 * @param playerNumber
+	 */
 	void allotOneCard(int playerNumber) {
 		Random random = new Random();
 
@@ -36,6 +49,10 @@ public class DeckOfCards {
 		}
 	}
 	
+	/**
+	 * Print the cards
+	 * @param playerNumber
+	 */
 	void print(int playerNumber) {
 		for(int suit = 0; suit < 4; suit++) {
 			for(int rank = 0; rank < 13; rank++) {
@@ -46,6 +63,11 @@ public class DeckOfCards {
 		}
 		System.out.println("-------------------------------------------------------------------------------------------------------");
 	}
+	/**
+	 * Get the rank of the card
+	 * @param rankNumber
+	 * @return
+	 */
 	String getRank(int rankNumber) {
 		switch(rankNumber) {
 		case 0:
@@ -79,6 +101,11 @@ public class DeckOfCards {
 		}
 	}
 	
+	/**
+	 * get  suit of card
+	 * @param suitNumber
+	 * @return
+	 */
 	String getSuit(int suitNumber) {
 		switch(suitNumber) {
 		case 0:

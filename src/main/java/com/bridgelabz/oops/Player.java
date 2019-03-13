@@ -2,6 +2,11 @@ package com.bridgelabz.oops;
 
 import com.bridgelabz.ds.Queue;
 
+/**
+ * Player class that contains private members and required getters and setters 
+ * @author : Tasif Mohammed
+ * @version : 1.0
+ */
 public class Player {
 	Queue<Card> cardsQue;
 	int[][] playerCards;

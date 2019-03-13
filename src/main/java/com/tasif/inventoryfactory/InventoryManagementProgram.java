@@ -8,6 +8,11 @@ import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 import org.json.simple.parser.ParseException;
 
+/**
+ * Purpose : program to Create InventoryManager to manage the Inventory. The Inventory Manager will use InventoryFactory to create Inventory Object from JSON. The InventoryManager will call each Inventory Object in its list to calculate the Inventory Price and then call the Inventory Object to return the JSON String.
+ * @author : Tasif Mohammed
+ * @version : 1.0
+ */
 public class InventoryManagementProgram {
 	public static void main(String[] args) throws IOException, ParseException {
 		String path = "/home/admin1/eclipse-workspace/tasif/oops/oops/src/main/java/com/tasif/inventoryfactory/inventory.json";

@@ -11,6 +11,11 @@ import org.codehaus.jackson.map.ObjectMapper;
 import com.bridgelabz.ds.Stack;
 import com.bridgelabz.util.Utility;
 
+/**
+ * Purpose : Maintain the Stock Symbol Purchased or Sold in a Stack implemented using Linked List to indicate transactions done.
+ * @author : Tasif Mohammed
+ * @version : 1.0
+ */
 public class StockStack {
 
 	public static void main(String[] args) throws JsonParseException, JsonMappingException, IOException {

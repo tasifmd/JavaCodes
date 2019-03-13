@@ -1,5 +1,10 @@
 package com.bridgelabz.oops;
 
+/**
+ * Purpose : Company class that contains private data members and respective fetters and setters
+ * @author : Tasif Mohammed
+ * @version 1.0
+ */
 public class Company {
 	private String name;
 	private int totalShares;

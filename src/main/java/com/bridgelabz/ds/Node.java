@@ -1,5 +1,11 @@
 package com.bridgelabz.ds;
 
+/**
+ * Node class to create own data structure 
+ * @author admin1
+ * @version 1.0
+ * @param <T>
+ */
 public class Node<T> implements Comparable<T> {
     
    T value;

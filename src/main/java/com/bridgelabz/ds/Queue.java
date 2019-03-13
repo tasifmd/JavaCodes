@@ -1,5 +1,11 @@
 package com.bridgelabz.ds;
 
+/**
+ * Purpose : Program to create custom queue
+ * @author admin1
+ * @version 1.0
+ * @param <T>
+ */
 public class Queue<T> {
 	
 	LinkedList<T> linkedlist;

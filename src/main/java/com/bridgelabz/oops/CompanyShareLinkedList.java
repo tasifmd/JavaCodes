@@ -10,6 +10,11 @@ import org.codehaus.jackson.map.ObjectMapper;
 import com.bridgelabz.ds.*;
 import com.bridgelabz.util.*;
 
+/**
+ * Purpose : Maintain the List of CompanyShares in a Linked List So new CompanyShares can be added or removed easily. Do not use any Collection Library to implement Linked List.
+ * @author : Tasif Mohammed
+ * @version : 1.0
+ */
 public class CompanyShareLinkedList {
 	
 	public static void main(String[] args) throws JsonParseException, JsonMappingException, IOException {

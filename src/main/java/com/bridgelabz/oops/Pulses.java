@@ -1,5 +1,10 @@
 package com.bridgelabz.oops;
 
+/**
+ * Pulses class that contains private members and required getters and setters 
+ * @author : Tasif Mohammed
+ * @version : 1.0
+ */
 public class Pulses {
 	private String name;
 	private double weight;

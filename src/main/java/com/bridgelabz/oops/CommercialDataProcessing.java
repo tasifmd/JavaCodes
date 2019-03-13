@@ -12,6 +12,11 @@ import org.codehaus.jackson.map.ObjectMapper;
 
 import com.bridgelabz.util.Utility;
 
+/**
+ * Purpose : Program to implements a data type that might be used by a financial institution to keep track of customer information
+ * @author admin1
+ * @version 1.0
+ */
 public class CommercialDataProcessing {
 
 	@SuppressWarnings({ "unchecked", "rawtypes" })

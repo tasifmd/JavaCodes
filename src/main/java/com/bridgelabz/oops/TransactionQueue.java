@@ -11,6 +11,11 @@ import org.codehaus.jackson.map.ObjectMapper;
 import com.bridgelabz.ds.Queue;
 import com.bridgelabz.util.Utility;
 
+/**
+ * Purpose : maintain DateTime of the transaction in a Queue implemented using LinkedList to indicate when the transactions were done.
+ * @author : Tasif Mohammed
+ * @version : 1.0
+ */
 public class TransactionQueue {
 
 	public static void main(String[] args) throws JsonParseException, JsonMappingException, IOException {

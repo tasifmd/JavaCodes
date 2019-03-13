@@ -2,6 +2,12 @@ package com.bridgelabz.ds;
 
 import com.bridgelabz.ds.LinkedList;
 
+/**
+ * Purpose : Create custom class 
+ * @author : Tasif Mohammed
+ * @version : 1.0
+ * @param <T>
+ */
 public class Stack<T> {
 	
 	LinkedList<T> linklist;

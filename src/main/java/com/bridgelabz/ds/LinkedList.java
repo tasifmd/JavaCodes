@@ -2,6 +2,12 @@ package com.bridgelabz.ds;
 
 import java.io.Serializable;
 
+/**
+ * Class to make custom linked list
+ * @author Tasif Mohammed
+ * @version 1.0
+ * @param <T>
+ */
 public class LinkedList<T> {
 	Node<T> head;
     Node<T> tail;
@@ -10,6 +16,10 @@ public class LinkedList<T> {
 		return head==null;
 	}
     
+    /**
+     * Add element
+     * @param element
+     */
     public void add(T element){
          
         Node<T> nd = new Node<T>();
@@ -23,6 +33,10 @@ public class LinkedList<T> {
         }
       
     }
+    /**
+     * Add element at last position
+     * @param data
+     */
     public void insertAtLast(T data)
 	{
 		Node<T> node = new Node<T>();
@@ -43,6 +57,10 @@ public class LinkedList<T> {
 			n.nextRef = node;
 		}
 	}
+    /**
+     * Delete element at last position
+     * @return
+     */
     public T deleteAtLast()
 	{
 		if(head == null)
@@ -61,6 +79,10 @@ public class LinkedList<T> {
 			return(data);
 		}
 	}
+    /**
+     * Remove element at specific index
+     * @param index
+     */
     public void remove(int index){
 		if(isEmpty())
 			return;

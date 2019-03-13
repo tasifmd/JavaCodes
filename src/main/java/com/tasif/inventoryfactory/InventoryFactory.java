@@ -9,6 +9,11 @@ import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
 import org.json.simple.parser.ParseException;
 
+/**
+ * Class that has some helping methods
+ * @author Tasif Mohammed
+ * @version : 1.0
+ */
 public class InventoryFactory {
 	public static final InventoryFactory factory = new InventoryFactory();
 

@@ -1,5 +1,10 @@
 package com.tasif.inventoryfactory;
 
+/**
+ * Inventory class that contains private members and required getters and setters 
+ * @author : Tasif Mohammed
+ * @version : 1.0
+ */
 public class Inventory {
 	private String product;
     private double inventoryPrice;
